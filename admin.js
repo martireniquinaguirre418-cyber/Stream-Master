@@ -1,110 +1,75 @@
-const ADMIN_PASSWORD = "streammaster2026"; // Puedes cambiar esta clave
-
-let adminProducts = getProducts();
+const PASSWORD = "streammaster2026";
+let products = JSON.parse(localStorage.getItem("streamMasterProductsPRO")) || INITIAL_PRODUCTS;
 
 function login(){
-  const pass = document.getElementById("passwordInput").value;
-  const msg = document.getElementById("loginMsg");
-
-  if(pass === ADMIN_PASSWORD){
-    localStorage.setItem("streamMasterAdmin", "ok");
+  if(document.getElementById("pass").value === PASSWORD){
     document.getElementById("loginBox").classList.add("hidden");
     document.getElementById("adminPanel").classList.remove("hidden");
     renderEditor();
-  }else{
-    msg.textContent = "Clave incorrecta.";
+  } else {
+    document.getElementById("msg").textContent = "Clave incorrecta.";
   }
 }
 
-function checkSession(){
-  if(localStorage.getItem("streamMasterAdmin") === "ok"){
-    document.getElementById("loginBox").classList.add("hidden");
-    document.getElementById("adminPanel").classList.remove("hidden");
-    renderEditor();
-  }
-}
+function esc(s){ return String(s ?? "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); }
 
 function renderEditor(){
   const editor = document.getElementById("editor");
   editor.innerHTML = "";
-
-  adminProducts.forEach((p, i) => {
-    const box = document.createElement("div");
-    box.className = "product-edit";
-    box.innerHTML = `
-      <h3>${i+1}. ${p.name}</h3>
+  products.forEach((p,i)=>{
+    const div = document.createElement("div");
+    div.className = "edit";
+    div.innerHTML = `
+      <h3>${i+1}. ${esc(p.name)}</h3>
       <div class="edit-grid">
-        <label><span>Nombre</span><input value="${escapeHTML(p.name)}" oninput="adminProducts[${i}].name=this.value"></label>
-        <label><span>Categoría</span>
-          <select onchange="adminProducts[${i}].category=this.value">
-            ${categoryOptions(p.category)}
-          </select>
-        </label>
-        <label><span>Precio</span><input value="${escapeHTML(p.price)}" oninput="adminProducts[${i}].price=this.value"></label>
-        <label><span>Duración</span><input value="${escapeHTML(p.duration)}" oninput="adminProducts[${i}].duration=this.value"></label>
-        <label><span>Activación</span><input value="${escapeHTML(p.activation)}" oninput="adminProducts[${i}].activation=this.value"></label>
-        <label><span>Icono o emoji</span><input value="${escapeHTML(p.icon || "")}" oninput="adminProducts[${i}].icon=this.value"></label>
-        <label><span>Imagen URL</span><input value="${escapeHTML(p.image || "")}" oninput="adminProducts[${i}].image=this.value" placeholder="https://..."></label>
-        <label><span>Descripción</span><textarea rows="3" oninput="adminProducts[${i}].description=this.value">${escapeHTML(p.description)}</textarea></label>
+        <label><span>Nombre</span><input value="${esc(p.name)}" oninput="products[${i}].name=this.value"></label>
+        <label><span>Categoría</span><input value="${esc(p.category)}" oninput="products[${i}].category=this.value"></label>
+        <label><span>Precio</span><input value="${esc(p.price)}" oninput="products[${i}].price=this.value"></label>
+        <label><span>Duración</span><input value="${esc(p.duration)}" oninput="products[${i}].duration=this.value"></label>
+        <label><span>Activación</span><input value="${esc(p.activation)}" oninput="products[${i}].activation=this.value"></label>
+        <label><span>Icono</span><input value="${esc(p.icon)}" oninput="products[${i}].icon=this.value"></label>
+        <label><span>Imagen URL</span><input value="${esc(p.image)}" oninput="products[${i}].image=this.value"></label>
+        <label><span>Ventas / popularidad</span><input type="number" value="${esc(p.sales || 0)}" oninput="products[${i}].sales=Number(this.value)"></label>
+        <label><span>Destacado</span><select onchange="products[${i}].featured=this.value==='true'"><option value="true" ${p.featured?'selected':''}>Sí</option><option value="false" ${!p.featured?'selected':''}>No</option></select></label>
+        <label><span>Oferta</span><select onchange="products[${i}].offer=this.value==='true'"><option value="true" ${p.offer?'selected':''}>Sí</option><option value="false" ${!p.offer?'selected':''}>No</option></select></label>
+        <label><span>Descripción</span><textarea rows="5" oninput="products[${i}].description=this.value">${esc(p.description)}</textarea></label>
       </div>
-      <button class="remove" onclick="removeProduct(${i})">Eliminar producto</button>
+      <button class="btn red" onclick="removeProduct(${i})">Eliminar producto</button>
     `;
-    editor.appendChild(box);
+    editor.appendChild(div);
   });
-}
-
-function categoryOptions(selected){
-  const cats = ["Streaming","TV y Deportes","Diseño y Productividad","IA","Redes Sociales"];
-  return cats.map(c => `<option value="${c}" ${c===selected?"selected":""}>${c}</option>`).join("");
 }
 
 function addProduct(){
-  adminProducts.push({
-    name:"Nuevo producto",
-    category:"Streaming",
-    price:"Consultar",
-    duration:"30 días",
-    activation:"Inmediata",
-    image:"",
-    icon:"⭐",
-    description:"Descripción del producto."
-  });
+  products.push({name:"Nuevo producto",category:"Streaming",price:"Consultar",duration:"30 días",activation:"Inmediata",image:"",icon:"⭐",description:"Descripción del producto.",featured:false,offer:false,sales:0});
   renderEditor();
 }
 
-function removeProduct(index){
+function removeProduct(i){
   if(confirm("¿Eliminar este producto?")){
-    adminProducts.splice(index,1);
+    products.splice(i,1);
     renderEditor();
   }
 }
 
-function saveProducts(){
-  setProducts(adminProducts);
-  alert("Cambios guardados. Ya se verán en la tienda.");
+function saveLocal(){
+  localStorage.setItem("streamMasterProductsPRO", JSON.stringify(products));
+  alert("Guardado en este navegador. Para publicarlo, descarga data.js y súbelo a GitHub.");
 }
 
-function resetData(){
-  if(confirm("¿Restaurar todos los productos iniciales?")){
-    adminProducts = DEFAULT_PRODUCTS;
-    setProducts(adminProducts);
+function resetAll(){
+  if(confirm("¿Restaurar datos iniciales?")){
+    products = INITIAL_PRODUCTS;
+    localStorage.removeItem("streamMasterProductsPRO");
     renderEditor();
   }
 }
 
-function exportData(){
-  const data = JSON.stringify(adminProducts, null, 2);
-  const blob = new Blob([data], {type:"application/json"});
+function downloadData(){
+  const content = "const WHATSAPP_NUMBER = '51992001097';\nconst INITIAL_PRODUCTS = " + JSON.stringify(products, null, 2) + ";\n";
+  const blob = new Blob([content], {type:"text/javascript"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "stream-master-productos.json";
+  a.download = "data.js";
   a.click();
 }
-
-function escapeHTML(str){
-  return String(str).replace(/[&<>"']/g, m => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-  }[m]));
-}
-
-checkSession();

@@ -1,61 +1,71 @@
-let products = getProducts();
+let products = loadProducts();
 
-const heroWhatsapp = document.getElementById("heroWhatsapp");
-heroWhatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero información sobre los servicios de Stream Master.")}`;
+function loadProducts(){ return JSON.parse(localStorage.getItem("streamMasterProductsPRO")) || INITIAL_PRODUCTS; }
+function saveProductsLocal(data){ localStorage.setItem("streamMasterProductsPRO", JSON.stringify(data)); }
 
-function productVisual(product){
-  if(product.image && product.image.trim() !== ""){
-    return `<img src="${product.image}" alt="${product.name}">`;
-  }
-  return `<span>${product.icon || "⭐"}</span>`;
+function validImage(url){ return url && url.trim().startsWith("http") && !url.includes("google.com/imgres"); }
+function productVisual(p){ return validImage(p.image) ? `<img src="${p.image}" alt="${p.name}">` : `<span>${p.icon || "⭐"}</span>`; }
+
+function setup(){
+  const visits = Number(localStorage.getItem("streamMasterVisits") || 0) + 1;
+  localStorage.setItem("streamMasterVisits", visits);
+  document.getElementById("visitCount").textContent = visits;
+  document.getElementById("productCount").textContent = products.length;
+
+  const cats = ["Todos", ...new Set(products.map(p => p.category || "Otros"))];
+  document.getElementById("category").innerHTML = cats.map(c => `<option>${c}</option>`).join("");
+
+  const msg = "Hola, quiero información sobre Stream Master.";
+  document.getElementById("waHero").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  document.getElementById("floatWa").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  document.getElementById("chatWa").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  renderAll();
 }
 
-function renderProducts(){
-  products = getProducts();
-  const grid = document.getElementById("productsGrid");
-  const search = document.getElementById("search").value.toLowerCase();
-  const category = document.getElementById("category").value;
-
-  grid.innerHTML = "";
-
-  products
-    .filter(p => category === "Todos" || p.category === category)
-    .filter(p => p.name.toLowerCase().includes(search) || p.description.toLowerCase().includes(search))
-    .forEach((product, index) => {
-      const card = document.createElement("article");
-      card.className = "card";
-      card.onclick = () => openModal(index);
-      card.innerHTML = `
-        <div class="card-img">${productVisual(product)}</div>
-        <div class="card-body">
-          <p class="category">${product.category}</p>
-          <h3>${product.name}</h3>
-          <p class="price">${product.price}</p>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
+function card(p, i){
+  return `<article class="card" onclick="openModal(${i})">
+    ${p.offer ? '<div class="ribbon">OFERTA</div>' : ''}
+    <div class="visual">${productVisual(p)}</div>
+    <div class="card-body">
+      <p class="cat">${p.category || "Otros"}</p>
+      <h3>${p.name}</h3>
+      <p class="price">${p.price}</p>
+    </div>
+  </article>`;
 }
 
-function openModal(index){
-  const product = products[index];
-  document.getElementById("modalImage").src = product.image && product.image.trim() !== "" 
-    ? product.image 
-    : "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='700' height='300'><rect width='100%' height='100%' fill='#101021'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='90'>${product.icon || "⭐"}</text></svg>`);
-  document.getElementById("modalCategory").textContent = product.category;
-  document.getElementById("modalName").textContent = product.name;
-  document.getElementById("modalDesc").textContent = product.description;
-  document.getElementById("modalPrice").textContent = product.price;
-  document.getElementById("modalDuration").textContent = product.duration;
-  document.getElementById("modalActivation").textContent = product.activation;
+function renderAll(){
+  products = loadProducts();
+  const search = (document.getElementById("search")?.value || "").toLowerCase();
+  const category = document.getElementById("category")?.value || "Todos";
+  const filtered = products.filter(p => 
+    (category === "Todos" || p.category === category) &&
+    ((p.name || "").toLowerCase().includes(search) || (p.description || "").toLowerCase().includes(search))
+  );
 
-  const msg = `Hola, deseo adquirir ${product.name}. Precio: ${product.price}. Duración: ${product.duration}. Activación: ${product.activation}.`;
-  document.getElementById("modalWhatsapp").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  document.getElementById("productModal").classList.remove("hidden");
+  document.getElementById("productsGrid").innerHTML = filtered.map(p => card(p, products.indexOf(p))).join("");
+  document.getElementById("offersGrid").innerHTML = products.filter(p => p.offer).slice(0,10).map(p => card(p, products.indexOf(p))).join("");
+  document.getElementById("bestGrid").innerHTML = [...products].sort((a,b)=>(b.sales||0)-(a.sales||0)).slice(0,10).map(p => card(p, products.indexOf(p))).join("");
+  document.getElementById("featuredGrid").innerHTML = products.filter(p => p.featured).slice(0,10).map(p => card(p, products.indexOf(p))).join("");
+  document.getElementById("galleryGrid").innerHTML = products.slice(0,18).map(p => `<div class="gallery-item">${productVisual(p)}</div>`).join("");
 }
 
-function closeModal(){
-  document.getElementById("productModal").classList.add("hidden");
+function openModal(i){
+  const p = products[i];
+  document.getElementById("modalVisual").innerHTML = productVisual(p);
+  document.getElementById("modalCategory").textContent = p.category || "Otros";
+  document.getElementById("modalName").textContent = p.name;
+  document.getElementById("modalDesc").textContent = p.description || "";
+  document.getElementById("modalPrice").textContent = p.price || "Consultar";
+  document.getElementById("modalDuration").textContent = p.duration || "Consultar";
+  document.getElementById("modalActivation").textContent = p.activation || "Consultar";
+
+  const msg = `Hola, deseo adquirir ${p.name}. Precio: ${p.price}. Duración: ${p.duration}. Activación: ${p.activation}.`;
+  document.getElementById("modalWa").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  document.getElementById("modal").classList.remove("hidden");
 }
 
-renderProducts();
+function closeModal(){ document.getElementById("modal").classList.add("hidden"); }
+function toggleChat(){ document.getElementById("chatBody").classList.toggle("hidden"); }
+
+setup();

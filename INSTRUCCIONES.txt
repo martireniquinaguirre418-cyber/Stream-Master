@@ -1,0 +1,32 @@
+STREAM MASTER PRO
+
+Archivos:
+- index.html: tienda pública
+- admin.html: panel privado
+- style.css: diseño
+- app.js: funcionamiento público
+- admin.js: funcionamiento del panel
+- data.js: tus productos y datos
+
+Clave del panel:
+streammaster2026
+
+Funciones incluidas:
+- Contador de visitas local
+- Más vendidos
+- Productos destacados
+- Botón flotante de WhatsApp
+- Chat de WhatsApp
+- Galería de imágenes
+- Ofertas
+- Animaciones
+- SEO básico para Google
+- Panel para editar precios, imágenes, descripciones, duración, activación, ofertas y destacados
+
+IMPORTANTE:
+GitHub Pages no tiene base de datos. Para que tus clientes vean cambios futuros:
+1. Entra a admin.html
+2. Edita productos
+3. Haz clic en "Descargar data.js actualizado"
+4. En GitHub, reemplaza el archivo data.js
+5. Espera 1 a 3 minutos

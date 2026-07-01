@@ -3,33 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel Admin - Stream Master</title>
+  <title>Admin | Stream Master</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="admin-hero">
-    <h1>Panel de administración</h1>
-    <p>Solo tú puedes editar precios, imágenes, descripciones, duración y activación.</p>
+    <h1>Panel privado Stream Master</h1>
+    <p>Edita precios, imágenes, descripción, duración, activación, ofertas y destacados.</p>
     <a href="index.html" class="btn blue">Ver tienda</a>
   </header>
 
-  <main class="container">
-    <section id="loginBox" class="admin-box">
-      <h2>Ingresar clave</h2>
-      <p>Clave inicial: <strong>streammaster2026</strong></p>
-      <input id="passwordInput" type="password" placeholder="Escribe tu clave" />
+  <main>
+    <section id="loginBox" class="panel">
+      <h2>Ingresar</h2>
+      <p>Clave inicial: <b>streammaster2026</b></p>
+      <input id="pass" type="password" placeholder="Contraseña">
       <button class="btn red" onclick="login()">Entrar</button>
-      <p id="loginMsg" class="warning"></p>
+      <p id="msg"></p>
     </section>
 
-    <section id="adminPanel" class="admin-box hidden">
-      <div class="admin-actions">
-        <button class="btn gold" onclick="addProduct()">Agregar producto</button>
-        <button class="btn red" onclick="saveProducts()">Guardar cambios</button>
-        <button class="btn blue" onclick="exportData()">Descargar respaldo</button>
-        <button class="btn dark" onclick="resetData()">Restaurar inicial</button>
-      </div>
-      <p class="note">Para imágenes puedes pegar un enlace de internet o usar emojis/iconos. Si dejas vacío, saldrá una imagen genérica.</p>
+    <section id="adminPanel" class="panel hidden">
+      <button class="btn gold" onclick="addProduct()">Agregar producto</button>
+      <button class="btn red" onclick="saveLocal()">Guardar en este navegador</button>
+      <button class="btn blue" onclick="downloadData()">Descargar data.js actualizado</button>
+      <button class="btn dark" onclick="resetAll()">Restaurar inicial</button>
+      <p class="note">Para que tus clientes vean los cambios publicados en GitHub: descarga <b>data.js actualizado</b> y reemplaza el archivo <b>data.js</b> en tu repositorio.</p>
       <div id="editor"></div>
     </section>
   </main>
