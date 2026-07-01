@@ -1,15 +1,25 @@
-STREAM MASTER - INSTRUCCIONES
+STREAM MASTER V5 ENTERPRISE - FASE 1
 
-1. Abre index.html para ver la tienda.
-2. Abre admin.html para editar.
-3. Clave inicial del panel: streammaster2026
-4. Puedes cambiar la clave en admin.js, línea:
-   const ADMIN_PASSWORD = "streammaster2026";
-5. Tu número WhatsApp ya está configurado:
-   51992001097
-6. Los cambios se guardan en el navegador usando localStorage.
-7. Para publicarla en internet, sube todos los archivos a GitHub Pages, Netlify o tu hosting.
+Ya está iniciada la nueva versión Enterprise.
 
-IMPORTANTE:
-Esta protección con clave es básica porque es una página estática.
-Para máxima seguridad se necesita hosting con base de datos y login real.
+Incluye:
+- Diseño nuevo tipo tienda premium.
+- Banner grande con productos.
+- Ofertas con cuenta regresiva.
+- Destacados.
+- Más vendidos.
+- Catálogo con búsqueda.
+- WhatsApp inteligente.
+- Panel privado en /admin/
+- Tus productos importados desde stream-master-productos.json.
+
+Clave admin:
+SM-Privado-992001097
+
+Cómo publicar:
+1. Sube todo el contenido de esta carpeta a GitHub.
+2. Asegúrate de conservar carpetas css, js y admin.
+3. Abre la página en incógnito.
+
+Siguiente fase:
+Conectar Firebase para que los cambios se guarden online sin reemplazar archivos.
