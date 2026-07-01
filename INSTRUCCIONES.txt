@@ -1,28 +1,25 @@
-STREAM MASTER V3
+STREAM MASTER V4 PRO
 
-Esta versión incluye:
-- Diseño más profesional tipo tienda premium.
-- Carruseles de ofertas, más vendidos y destacados.
-- Calificación con estrellas.
-- Etiquetas como Premium, Oferta y Disponible.
-- Contador de visitas local.
-- Botón flotante de WhatsApp.
-- Chat de WhatsApp.
-- Galería de imágenes.
-- Animaciones y SEO básico.
-- Panel para editar productos.
+Mejoras incluidas:
+- Sin enlace Admin visible en la página principal.
+- Contraseña ya no aparece escrita en pantalla.
+- Nueva clave del panel: SM-Privado-992001097
+- Banner grande con imágenes de servicios.
+- Tarjetas estilo Netflix/Steam con efecto 3D.
+- Logos/imágenes grandes.
+- Ofertas con cuenta regresiva diaria.
+- Productos destacados.
+- Favoritos.
+- Panel de administración mejorado.
+- Subir imágenes desde tu PC.
+- WhatsApp inteligente.
+- Estadísticas locales.
+- Diseño más rápido y moderno.
 
-Clave admin:
-streammaster2026
+Para editar entra manualmente a:
+/admin.html
 
-Para publicar:
-1. Sube todos estos archivos a GitHub reemplazando los anteriores.
-2. Espera 1 a 3 minutos.
-3. Abre la página en modo incógnito o presiona Ctrl + Shift + R.
+Clave:
+SM-Privado-992001097
 
-Para cambios futuros:
-1. Entra a admin.html.
-2. Edita productos.
-3. Guarda.
-4. Descarga data.js actualizado.
-5. Reemplaza data.js en GitHub.
+Sube todos los archivos a GitHub y reemplaza los anteriores.
