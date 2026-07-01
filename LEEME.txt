@@ -1,25 +1,23 @@
-STREAM MASTER V5 ENTERPRISE - FASE 1
-
-Ya está iniciada la nueva versión Enterprise.
+STREAM MASTER V6 ADMIN PRO
 
 Incluye:
-- Diseño nuevo tipo tienda premium.
-- Banner grande con productos.
-- Ofertas con cuenta regresiva.
-- Destacados.
-- Más vendidos.
-- Catálogo con búsqueda.
-- WhatsApp inteligente.
-- Panel privado en /admin/
-- Tus productos importados desde stream-master-productos.json.
+- Panel admin visual mejorado
+- Subir imágenes desde PC
+- Agregar/eliminar productos
+- Editar precios, duración, activación, descripción e imagen
+- Ofertas y destacados
+- Estadísticas locales
+- WhatsApp inteligente
+- Diseño más profesional
 
-Clave admin:
+Panel:
+https://TU-USUARIO.github.io/Stream-Master/admin/
+
+Clave:
 SM-Privado-992001097
 
-Cómo publicar:
-1. Sube todo el contenido de esta carpeta a GitHub.
-2. Asegúrate de conservar carpetas css, js y admin.
-3. Abre la página en incógnito.
-
-Siguiente fase:
-Conectar Firebase para que los cambios se guarden online sin reemplazar archivos.
+Para publicar cambios:
+1. Entra al panel.
+2. Edita.
+3. Descarga data.js.
+4. Reemplaza el archivo data.js dentro de la carpeta js en GitHub.
