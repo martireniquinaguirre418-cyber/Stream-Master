@@ -1,5 +1,5 @@
-window.STREAM_MASTER_WHATSAPP='51992001097';
-window.STREAM_MASTER_PRODUCTS=[
+window.SM_WHATSAPP='51992001097';
+window.SM_PRODUCTS=[
   {
     "name": "NETFLIX 4K PREMIUN",
     "category": "Streaming",
@@ -11,10 +11,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": true,
-    "sales": 250,
+    "sales": 300,
     "rating": 5,
     "badge": "Premium",
-    "views": 120
+    "views": 150
   },
   {
     "name": "DISNEY PREMUN + 7 SPN",
@@ -27,10 +27,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": true,
-    "sales": 244,
+    "sales": 293,
     "rating": 5,
     "badge": "Premium",
-    "views": 117
+    "views": 146
   },
   {
     "name": "PRIME VIDEO",
@@ -43,10 +43,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": false,
-    "sales": 238,
+    "sales": 286,
     "rating": 5,
     "badge": "Premium",
-    "views": 114
+    "views": 142
   },
   {
     "name": "HBO MAX",
@@ -59,10 +59,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": false,
-    "sales": 232,
+    "sales": 279,
     "rating": 5,
     "badge": "Premium",
-    "views": 111
+    "views": 138
   },
   {
     "name": "PARAMOUNT",
@@ -75,10 +75,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": false,
-    "sales": 226,
+    "sales": 272,
     "rating": 5,
     "badge": "Premium",
-    "views": 108
+    "views": 134
   },
   {
     "name": "IPTV",
@@ -91,10 +91,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 3 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": true,
-    "sales": 220,
+    "sales": 265,
     "rating": 5,
     "badge": "Premium",
-    "views": 105
+    "views": 130
   },
   {
     "name": "Peacock",
@@ -107,10 +107,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio.",
     "featured": true,
     "offer": false,
-    "sales": 214,
+    "sales": 258,
     "rating": 5,
     "badge": "Premium",
-    "views": 102
+    "views": 126
   },
   {
     "name": "APPLE TV",
@@ -123,10 +123,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Activación inmediata y soporte durante la vigencia del servicio",
     "featured": true,
     "offer": false,
-    "sales": 208,
+    "sales": 251,
     "rating": 5,
     "badge": "Premium",
-    "views": 99
+    "views": 122
   },
   {
     "name": "YouTube premium + YouTube Music NO RENOVABLE",
@@ -139,10 +139,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación directamente a tu correo electrónico. Es necesario que tu cuenta no pertenezca a ningún grupo familiar de YouTube Premium. Solo debes proporcionarnos tu correo, recibirás una invitación, la aceptas y el servicio quedará activo en pocos minutos. Servicio no renovable automáticamente.",
     "featured": false,
     "offer": true,
-    "sales": 202,
+    "sales": 244,
     "rating": 5,
     "badge": "Premium",
-    "views": 96
+    "views": 118
   },
   {
     "name": "Canva Pro",
@@ -155,10 +155,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Herramienta de diseño para flyers, tareas, publicaciones y trabajos.",
     "featured": false,
     "offer": true,
-    "sales": 196,
+    "sales": 237,
     "rating": 5,
     "badge": "Premium",
-    "views": 93
+    "views": 114
   },
   {
     "name": "Microsoft 365",
@@ -171,10 +171,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Herramientas de productividad para documentos, hojas de cálculo y presentaciones.",
     "featured": false,
     "offer": false,
-    "sales": 190,
+    "sales": 230,
     "rating": 5,
     "badge": "Disponible",
-    "views": 90
+    "views": 110
   },
   {
     "name": "Figma Pro",
@@ -187,10 +187,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación a tu correo. Incluye herramientas profesionales para diseño UI/UX, prototipos interactivos, colaboración en equipo, historial de versiones, bibliotecas compartidas y funciones avanzadas para diseñadores.",
     "featured": false,
     "offer": false,
-    "sales": 184,
+    "sales": 223,
     "rating": 5,
     "badge": "Disponible",
-    "views": 87
+    "views": 106
   },
   {
     "name": "Gemini Pro",
@@ -203,10 +203,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "IA para estudiar, redactar, investigar y crear contenido.",
     "featured": false,
     "offer": false,
-    "sales": 178,
+    "sales": 216,
     "rating": 5,
     "badge": "Disponible",
-    "views": 84
+    "views": 102
   },
   {
     "name": "Super Grok",
@@ -219,10 +219,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación a tu correo. Incluye chat inteligente, generación de imágenes y videos ilimitados, ayuda para programación, investigación, análisis de documentos y asistencia en tiempo real.",
     "featured": false,
     "offer": true,
-    "sales": 172,
+    "sales": 209,
     "rating": 5,
     "badge": "Disponible",
-    "views": 81
+    "views": 98
   },
   {
     "name": "Perplexity",
@@ -235,10 +235,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación a tu correo. Realiza búsquedas con IA, obtén respuestas con fuentes confiables, analiza documentos, investiga y genera contenido de forma rápida.",
     "featured": false,
     "offer": false,
-    "sales": 166,
+    "sales": 202,
     "rating": 5,
     "badge": "Disponible",
-    "views": 78
+    "views": 94
   },
   {
     "name": "Likes, seguidores y comentarios",
@@ -251,10 +251,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Servicio para mejorar interacción en cualquier red social.",
     "featured": false,
     "offer": false,
-    "sales": 160,
+    "sales": 195,
     "rating": 5,
     "badge": "Disponible",
-    "views": 75
+    "views": 90
   },
   {
     "name": "Spotify",
@@ -267,10 +267,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación a tu propio correo O se te da correo y contraseña. Conserva tu cuenta, listas de reproducción y canciones favoritas. Disfruta de Spotify Premium sin anuncios y con descargas para escuchar sin conexión.",
     "featured": false,
     "offer": false,
-    "sales": 154,
+    "sales": 188,
     "rating": 5,
     "badge": "Disponible",
-    "views": 72
+    "views": 86
   },
   {
     "name": "Dezzer",
@@ -283,10 +283,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Accede a Deezer Premium y disfruta de millones de canciones sin anuncios, con audio de alta calidad, descargas offline y reproducción ilimitada.",
     "featured": false,
     "offer": false,
-    "sales": 148,
+    "sales": 181,
     "rating": 5,
     "badge": "Disponible",
-    "views": 69
+    "views": 82
   },
   {
     "name": "Microsoft office 365 + 5 invitaciones ",
@@ -299,10 +299,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Incluye Microsoft 365 completo por 1 año con Word, Excel, PowerPoint, Outlook y más. Además, contaras con 5 invitaciones, para que otros tambien puedan acceder a los beneficios, cada una con 1 TB de almacenamiento en OneDrive (5 TB en total). El almacenamiento es individual para cada invitación, no se comparte entre usuarios.",
     "featured": false,
     "offer": false,
-    "sales": 142,
+    "sales": 174,
     "rating": 5,
     "badge": "Disponible",
-    "views": 66
+    "views": 78
   },
   {
     "name": "Gemini pro + 5 invitaciones ",
@@ -315,10 +315,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación en tu propio correo. Incluye Gemini Pro por 1 año y 5 invitaciones. Para la activación se requiere acceso temporal a tu cuenta (correo y contraseña); una vez finalizado el proceso, podrás cambiar tu contraseña con total tranquilidad.",
     "featured": false,
     "offer": false,
-    "sales": 136,
+    "sales": 167,
     "rating": 5,
     "badge": "Disponible",
-    "views": 63
+    "views": 74
   },
   {
     "name": "YouTube premium + YouTube Music  RENOVABLE ",
@@ -331,10 +331,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación en tu propio correo. Solo necesitamos tu correo electrónico para la activación. Tu cuenta no debe pertenecer a ningún grupo familiar de YouTube Premium. El servicio es renovable, por lo que podrás mantener tu suscripción activa de forma continua mientras renueves el plan.",
     "featured": false,
     "offer": true,
-    "sales": 130,
+    "sales": 160,
     "rating": 5,
     "badge": "Disponible",
-    "views": 60
+    "views": 70
   },
   {
     "name": "YouTube premium + YouTube Music familiar NO RENOVABLE",
@@ -347,10 +347,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación en tu propio correo. Incluye YouTube Premium + YouTube Music Familiar por 1 mes. Para la activación no debes aver estado en un grupo familiar solo necesitamos tu correo y contraseña. Una vez finalizado el proceso, podrás cambiar tu contraseña. Servicio no renovable.",
     "featured": false,
     "offer": true,
-    "sales": 124,
+    "sales": 153,
     "rating": 5,
     "badge": "Disponible",
-    "views": 57
+    "views": 66
   },
   {
     "name": "YouTube premium + YouTube Music familiar RENOVABLE",
@@ -363,10 +363,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación en tu propio correo. Incluye YouTube Premium + YouTube Music Familiar por 1 mes. Para la activación no debes aver estado en un grupo familiar solo necesitamos tu correo y contraseña. Una vez finalizado el proceso, podrás cambiar tu contraseña. Servicio renovable.",
     "featured": false,
     "offer": false,
-    "sales": 118,
+    "sales": 146,
     "rating": 5,
     "badge": "Disponible",
-    "views": 54
+    "views": 62
   },
   {
     "name": "Crunchyrroll",
@@ -379,10 +379,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Disfruta de Crunchyroll Premium sin anuncios, acceso ilimitado a miles de animes, estrenos simultáneos con Japón y reproducción en alta calidad. Activación inmediata.",
     "featured": false,
     "offer": false,
-    "sales": 112,
+    "sales": 139,
     "rating": 5,
     "badge": "Disponible",
-    "views": 51
+    "views": 58
   },
   {
     "name": "Autodesk Suite",
@@ -395,10 +395,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación a tu correo. Accede por 1 año a Autodesk Suite, incluyendo AutoCAD, Revit, Civil 3D, Inventor, 3ds Max, Maya, Navisworks y más herramientas profesionales para arquitectura, ingeniería, diseño y construcción.",
     "featured": false,
     "offer": false,
-    "sales": 106,
+    "sales": 132,
     "rating": 5,
     "badge": "Disponible",
-    "views": 48
+    "views": 54
   },
   {
     "name": "surfshark",
@@ -411,10 +411,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Disfruta de Surfshark VPN por 1 mes en 1 dispositivo. Navega con mayor privacidad y seguridad, protege tu conexión y accede a contenido con restricciones geográficas. Activación inmediata.",
     "featured": false,
     "offer": false,
-    "sales": 100,
+    "sales": 125,
     "rating": 5,
     "badge": "Disponible",
-    "views": 45
+    "views": 50
   },
   {
     "name": "express vpn",
@@ -427,10 +427,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Disfruta de ExpressVPN por 1 mes para 1 dispositivo. Protege tu privacidad, navega de forma segura y accede a contenido de diferentes países con una conexión rápida y estable.",
     "featured": false,
     "offer": false,
-    "sales": 94,
+    "sales": 118,
     "rating": 5,
     "badge": "Disponible",
-    "views": 42
+    "views": 46
   },
   {
     "name": "Chact gpt plus ",
@@ -443,10 +443,10 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Se entrega correo y contraseña. Acceso para 1 dispositivo. Al iniciar sesión por primera vez, se proporcionará un único código de verificación para garantizar el uso en un solo dispositivo. El código solo se entrega una vez. No hay reclamos ni reembolsos por pérdida del acceso debido al uso en otros dispositivos. Si la sesión se cierra automáticamente, envíanos una captura de pantalla para verificar el caso y brindarte soporte si corresponde.",
     "featured": false,
     "offer": false,
-    "sales": 88,
+    "sales": 111,
     "rating": 5,
     "badge": "Disponible",
-    "views": 39
+    "views": 42
   },
   {
     "name": "DGO + LIGA 1 MAX",
@@ -459,9 +459,9 @@ window.STREAM_MASTER_PRODUCTS=[
     "description": "Activación en tu TV mediante código (recomendado). Acceso exclusivo para 1 dispositivo. Para garantizar la estabilidad del servicio, el uso en más de un dispositivo no está permitido. Si se detecta acceso simultáneo desde otro equipo, la garantía se perderá y el servicio podrá ser suspendido. Si decides iniciar sesión en un televisor, celular o cualquier otro dispositivo con las credenciales, aplicarán las mismas condiciones.",
     "featured": false,
     "offer": false,
-    "sales": 82,
+    "sales": 104,
     "rating": 5,
     "badge": "Disponible",
-    "views": 36
+    "views": 38
   }
 ];

@@ -1,23 +1,25 @@
-STREAM MASTER V6 ADMIN PRO
+STREAM MASTER V7 - FASE 1
 
 Incluye:
-- Panel admin visual mejorado
-- Subir imágenes desde PC
-- Agregar/eliminar productos
-- Editar precios, duración, activación, descripción e imagen
-- Ofertas y destacados
-- Estadísticas locales
+- Diseño premium V7
+- Banner automático
+- Ofertas con cuenta regresiva
+- Más vendidos
+- Destacados
+- Buscador
 - WhatsApp inteligente
-- Diseño más profesional
+- Panel admin visual
+- Subir imágenes desde PC
+- Editar productos
 
 Panel:
-https://TU-USUARIO.github.io/Stream-Master/admin/
+/admin/
 
 Clave:
 SM-Privado-992001097
 
 Para publicar cambios:
-1. Entra al panel.
-2. Edita.
-3. Descarga data.js.
-4. Reemplaza el archivo data.js dentro de la carpeta js en GitHub.
+Descarga data.js desde el panel y reemplázalo en /js/data.js en GitHub.
+
+Siguiente fase:
+Conectar Firebase para guardar cambios en línea sin reemplazar archivos.
