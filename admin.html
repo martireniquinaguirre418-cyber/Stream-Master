@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin - Stream Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="admin-hero">
+    <h1>Panel de administración</h1>
+    <p>Solo tú puedes editar precios, imágenes, descripciones, duración y activación.</p>
+    <a href="index.html" class="btn blue">Ver tienda</a>
+  </header>
+
+  <main class="container">
+    <section id="loginBox" class="admin-box">
+      <h2>Ingresar clave</h2>
+      <p>Clave inicial: <strong>streammaster2026</strong></p>
+      <input id="passwordInput" type="password" placeholder="Escribe tu clave" />
+      <button class="btn red" onclick="login()">Entrar</button>
+      <p id="loginMsg" class="warning"></p>
+    </section>
+
+    <section id="adminPanel" class="admin-box hidden">
+      <div class="admin-actions">
+        <button class="btn gold" onclick="addProduct()">Agregar producto</button>
+        <button class="btn red" onclick="saveProducts()">Guardar cambios</button>
+        <button class="btn blue" onclick="exportData()">Descargar respaldo</button>
+        <button class="btn dark" onclick="resetData()">Restaurar inicial</button>
+      </div>
+      <p class="note">Para imágenes puedes pegar un enlace de internet o usar emojis/iconos. Si dejas vacío, saldrá una imagen genérica.</p>
+      <div id="editor"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

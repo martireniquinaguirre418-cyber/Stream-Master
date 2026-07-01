@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stream Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand"><span>⚡</span> Stream Master</div>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </nav>
+    <section class="hero-content">
+      <p class="badge">Streaming · IA · Diseño · TV · Redes Sociales</p>
+      <h1>Servicios premium al mejor precio</h1>
+      <p class="subtitle">Elige tu plataforma, revisa precio, duración, activación y compra directo por WhatsApp.</p>
+      <a id="heroWhatsapp" class="btn gold" target="_blank">Consultar por WhatsApp</a>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <input id="search" type="text" placeholder="Buscar plataforma..." oninput="renderProducts()" />
+      <select id="category" onchange="renderProducts()">
+        <option value="Todos">Todos</option>
+        <option value="Streaming">Streaming</option>
+        <option value="TV y Deportes">TV y Deportes</option>
+        <option value="Diseño y Productividad">Diseño y Productividad</option>
+        <option value="IA">IA</option>
+        <option value="Redes Sociales">Redes Sociales</option>
+      </select>
+    </section>
+
+    <section id="productsGrid" class="grid"></section>
+  </main>
+
+  <div id="productModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeModal()">×</button>
+      <img id="modalImage" class="modal-img" alt="Producto" />
+      <p id="modalCategory" class="pill"></p>
+      <h2 id="modalName"></h2>
+      <p id="modalDesc"></p>
+      <div class="details">
+        <div><strong>Precio</strong><span id="modalPrice"></span></div>
+        <div><strong>Duración</strong><span id="modalDuration"></span></div>
+        <div><strong>Activación</strong><span id="modalActivation"></span></div>
+      </div>
+      <h3>¿Desea adquirir este producto?</h3>
+      <a id="modalWhatsapp" class="btn red" target="_blank">Comprar por WhatsApp</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© Stream Master · Atención rápida por WhatsApp</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
