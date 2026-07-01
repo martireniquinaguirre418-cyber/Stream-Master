@@ -1,25 +1,27 @@
-STREAM MASTER V7 - FASE 1
+STREAM MASTER V8 FIREBASE PRO
 
-Incluye:
-- Diseño premium V7
-- Banner automático
-- Ofertas con cuenta regresiva
-- Más vendidos
-- Destacados
-- Buscador
-- WhatsApp inteligente
-- Panel admin visual
-- Subir imágenes desde PC
-- Editar productos
+Ya incluye tu configuración real de Firebase.
 
-Panel:
-/admin/
+Archivos importantes:
+- index.html
+- css/style.css
+- js/config.js
+- js/seed-products.js
+- js/app.js
+- admin/index.html
+- js/admin.js
 
-Clave:
-SM-Privado-992001097
+Pasos:
+1. Sube esta carpeta completa a GitHub reemplazando la anterior.
+2. En Firestore, entra a Reglas y pon temporalmente las reglas de REGLAS_FIRESTORE.txt.
+3. Abre tu web en incógnito.
+4. Entra al panel:
+   https://martireniquinaguirre418-cyber.github.io/Stream-Master/admin/
+5. Clave:
+   SM-Privado-992001097
+6. Presiona "Subir productos iniciales" solo una vez.
+7. Luego edita un producto y presiona "Guardar producto".
+8. Abre la tienda y verás el cambio automáticamente.
 
-Para publicar cambios:
-Descarga data.js desde el panel y reemplázalo en /js/data.js en GitHub.
-
-Siguiente fase:
-Conectar Firebase para guardar cambios en línea sin reemplazar archivos.
+Nota:
+Esta versión todavía usa imagen URL. La siguiente mejora será subir imágenes a Firebase Storage desde tu PC.

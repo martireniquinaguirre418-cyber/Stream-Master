@@ -1,0 +1,16 @@
+REGLAS TEMPORALES PARA FIRESTORE
+
+En Firebase > Firestore Database > Reglas, pega esto temporalmente:
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+
+IMPORTANTE:
+Esto es para probar. Luego hay que poner seguridad con Authentication.
