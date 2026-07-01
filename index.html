@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stream Master | Servicios Premium</title>
-  <meta name="description" content="Stream Master: plataformas streaming, IA, diseño, productividad, VPN, IPTV y servicios para redes sociales con compra directa por WhatsApp.">
-  <meta name="keywords" content="Stream Master, streaming Perú, Netflix, Disney, Prime Video, IPTV, YouTube Premium, Canva, Figma, Gemini, ChatGPT Plus, VPN">
-  <meta property="og:title" content="Stream Master | Servicios Premium">
-  <meta property="og:description" content="Catálogo premium con precios, duración, activación y compra por WhatsApp.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream Master | Catálogo Premium</title>
+  <meta name="description" content="Stream Master: catálogo de streaming, IPTV, IA, diseño, productividad, VPN, música y redes sociales. Compra directa por WhatsApp.">
+  <meta name="keywords" content="Stream Master, streaming, IPTV, YouTube Premium, Canva, ChatGPT, Gemini, Figma, VPN, Perú">
+  <meta property="og:title" content="Stream Master | Catálogo Premium">
+  <meta property="og:description" content="Servicios premium con precios, duración, activación y compra por WhatsApp.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-anim"></div>
+  <div class="lights"></div>
 
   <header class="hero">
-    <nav class="topbar">
-      <div class="brand">⚡ Stream <span>Master</span></div>
-      <div class="nav-actions">
-        <a href="#productos">Productos</a>
+    <nav class="nav">
+      <div class="brand">⚡ STREAM <span>MASTER</span></div>
+      <div class="links">
+        <a href="#catalogo">Catálogo</a>
         <a href="#ofertas">Ofertas</a>
-        <a href="admin.html" class="admin-link">Admin</a>
+        <a href="#top">Top</a>
+        <a href="admin.html" class="admin">Admin</a>
       </div>
     </nav>
 
-    <section class="hero-grid">
-      <div>
-        <p class="badge">🔥 Rojo neón · Dorado · Azul</p>
-        <h1>Servicios premium al mejor precio</h1>
-        <p class="hero-p">Streaming, IA, diseño, productividad, VPN, TV, deportes y redes sociales. Revisa cada producto y compra directo por WhatsApp.</p>
-        <div class="hero-buttons">
-          <a id="waHero" class="btn gold" target="_blank">Consultar por WhatsApp</a>
-          <a href="#productos" class="btn blue">Ver catálogo</a>
+    <section class="hero-content">
+      <div class="hero-copy">
+        <p class="chip">👑 Premium Store · Atención rápida</p>
+        <h1>Tu catálogo premium en un solo lugar</h1>
+        <p>Streaming, IPTV, IA, diseño, música, VPN y redes sociales. Revisa cada producto, condiciones y compra directo por WhatsApp.</p>
+        <div class="actions">
+          <a id="waHero" class="btn gold" target="_blank">Consultar ahora</a>
+          <a href="#catalogo" class="btn blue">Explorar catálogo</a>
         </div>
       </div>
-      <div class="stats-card">
-        <h3>Stream Master</h3>
-        <p>Atención rápida y catálogo actualizado.</p>
-        <div class="mini-stats">
-          <div><b id="visitCount">0</b><span>Visitas</span></div>
-          <div><b id="productCount">0</b><span>Productos</span></div>
-          <div><b>24/7</b><span>WhatsApp</span></div>
+
+      <div class="dashboard">
+        <h2>Stream Master</h2>
+        <p>Catálogo actualizado y compra rápida.</p>
+        <div class="stats">
+          <div><b id="visits">0</b><span>Visitas</span></div>
+          <div><b id="productsTotal">0</b><span>Productos</span></div>
+          <div><b id="offersTotal">0</b><span>Ofertas</span></div>
         </div>
       </div>
     </section>
@@ -48,49 +50,50 @@
 
   <main>
     <section id="ofertas" class="section">
-      <div class="section-title">
-        <h2>🎁 Ofertas destacadas</h2>
-        <p>Promociones y productos recomendados.</p>
+      <div class="title">
+        <h2>🎁 Ofertas y promociones</h2>
+        <p>Servicios destacados para comprar hoy.</p>
       </div>
-      <div id="offersGrid" class="horizontal"></div>
+      <div id="offerSlider" class="slider"></div>
     </section>
 
-    <section class="section">
-      <div class="section-title">
+    <section id="top" class="section">
+      <div class="title">
         <h2>🔥 Más vendidos</h2>
-        <p>Los productos más solicitados por clientes.</p>
+        <p>Productos con mayor demanda.</p>
       </div>
-      <div id="bestGrid" class="horizontal"></div>
+      <div id="bestSlider" class="slider"></div>
     </section>
 
     <section class="section">
-      <div class="section-title">
-        <h2>⭐ Productos destacados</h2>
-        <p>Servicios recomendados de Stream Master.</p>
+      <div class="title">
+        <h2>⭐ Recomendados</h2>
+        <p>Selección destacada de Stream Master.</p>
       </div>
-      <div id="featuredGrid" class="horizontal"></div>
+      <div id="featuredSlider" class="slider"></div>
     </section>
 
-    <section id="productos" class="section">
-      <div class="section-title">
+    <section id="catalogo" class="section">
+      <div class="title">
         <h2>📦 Catálogo completo</h2>
-        <p>Busca por nombre o filtra por categoría.</p>
+        <p>Busca o filtra por categoría.</p>
       </div>
 
       <div class="filters">
-        <input id="search" placeholder="Buscar producto..." oninput="renderAll()" />
+        <input id="search" type="text" placeholder="Buscar plataforma o servicio..." oninput="renderAll()">
         <select id="category" onchange="renderAll()"></select>
+        <button class="btn dark" onclick="clearFilters()">Limpiar</button>
       </div>
 
-      <div id="productsGrid" class="grid"></div>
+      <div id="grid" class="grid"></div>
     </section>
 
-    <section class="section gallery">
-      <div class="section-title">
-        <h2>📷 Galería</h2>
-        <p>Vista rápida de servicios disponibles.</p>
+    <section class="section">
+      <div class="title">
+        <h2>📷 Galería rápida</h2>
+        <p>Servicios disponibles en vista compacta.</p>
       </div>
-      <div id="galleryGrid" class="gallery-grid"></div>
+      <div id="gallery" class="gallery"></div>
     </section>
   </main>
 
@@ -98,8 +101,12 @@
     <div class="modal-card">
       <button class="close" onclick="closeModal()">×</button>
       <div id="modalVisual" class="modal-visual"></div>
-      <p id="modalCategory" class="pill"></p>
+      <div class="modal-head">
+        <p id="modalBadge" class="chip"></p>
+        <p id="modalCat" class="chip bluechip"></p>
+      </div>
       <h2 id="modalName"></h2>
+      <div class="stars">★★★★★</div>
       <p id="modalDesc" class="desc"></p>
       <div class="details">
         <div><b>Precio</b><span id="modalPrice"></span></div>
@@ -113,17 +120,17 @@
 
   <a id="floatWa" class="float-wa" target="_blank">💬</a>
 
-  <div class="chat-widget" id="chatWidget">
-    <button class="chat-head" onclick="toggleChat()">💬 Chat WhatsApp</button>
-    <div class="chat-body hidden" id="chatBody">
-      <p><b>Stream Master</b></p>
-      <p>Hola 👋 ¿Qué servicio deseas adquirir?</p>
-      <a id="chatWa" target="_blank" class="btn gold">Escribir ahora</a>
+  <div class="chat" id="chat">
+    <button onclick="toggleChat()" class="chat-btn">💬 Chat WhatsApp</button>
+    <div id="chatBody" class="chat-body hidden">
+      <b>Stream Master</b>
+      <p>Hola 👋 ¿Qué servicio deseas consultar?</p>
+      <a id="chatWa" class="btn gold" target="_blank">Escribir ahora</a>
     </div>
   </div>
 
   <footer>
-    <p>© Stream Master · Servicios premium · Compra directa por WhatsApp</p>
+    <p>© Stream Master · Catálogo Premium · Compra directa por WhatsApp</p>
   </footer>
 
   <script src="data.js"></script>

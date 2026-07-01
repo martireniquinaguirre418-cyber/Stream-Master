@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin | Stream Master</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Stream Master V3</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="admin-hero">
-    <h1>Panel privado Stream Master</h1>
-    <p>Edita precios, imágenes, descripción, duración, activación, ofertas y destacados.</p>
-    <a href="index.html" class="btn blue">Ver tienda</a>
-  </header>
+<header class="admin-hero">
+  <h1>Panel privado Stream Master</h1>
+  <p>Edita precios, imágenes, descripción, duración, activación, etiquetas, ofertas y destacados.</p>
+  <a href="index.html" class="btn blue">Ver tienda</a>
+</header>
 
-  <main>
-    <section id="loginBox" class="panel">
-      <h2>Ingresar</h2>
-      <p>Clave inicial: <b>streammaster2026</b></p>
-      <input id="pass" type="password" placeholder="Contraseña">
-      <button class="btn red" onclick="login()">Entrar</button>
-      <p id="msg"></p>
-    </section>
+<section id="loginBox" class="panel">
+  <h2>Ingresar</h2>
+  <p>Clave inicial: <b>streammaster2026</b></p>
+  <input id="pass" type="password" placeholder="Contraseña">
+  <button onclick="login()" class="btn red">Entrar</button>
+  <p id="msg"></p>
+</section>
 
-    <section id="adminPanel" class="panel hidden">
-      <button class="btn gold" onclick="addProduct()">Agregar producto</button>
-      <button class="btn red" onclick="saveLocal()">Guardar en este navegador</button>
-      <button class="btn blue" onclick="downloadData()">Descargar data.js actualizado</button>
-      <button class="btn dark" onclick="resetAll()">Restaurar inicial</button>
-      <p class="note">Para que tus clientes vean los cambios publicados en GitHub: descarga <b>data.js actualizado</b> y reemplaza el archivo <b>data.js</b> en tu repositorio.</p>
-      <div id="editor"></div>
-    </section>
-  </main>
+<section id="adminPanel" class="panel hidden">
+  <button onclick="addProduct()" class="btn gold">Agregar producto</button>
+  <button onclick="saveLocal()" class="btn red">Guardar en este navegador</button>
+  <button onclick="downloadData()" class="btn blue">Descargar data.js actualizado</button>
+  <button onclick="resetAll()" class="btn dark">Restaurar inicial</button>
+  <p class="note">Para publicar cambios en GitHub: descarga <b>data.js actualizado</b> y reemplaza el archivo <b>data.js</b> en tu repositorio.</p>
+  <div id="editor"></div>
+</section>
 
-  <script src="data.js"></script>
-  <script src="admin.js"></script>
+<script src="data.js"></script>
+<script src="admin.js"></script>
 </body>
 </html>
